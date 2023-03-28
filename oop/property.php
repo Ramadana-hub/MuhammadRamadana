@@ -18,7 +18,7 @@ $produk1->judul = "Naruto";
 $produk1->penulis = "Masashi Nishimoto";
 
 $produk2 = new Produk();
-$produk2->judul = "Unchartedd";
+$produk2->judul = "Uncharted";
 $produk2->ngasal = "abcd";
 
 
