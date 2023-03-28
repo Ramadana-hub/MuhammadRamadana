@@ -26,7 +26,7 @@ class Produk {
 
 $produk1 = new Produk("Naruto", "Masashi Nishimoto", "Erlangga", 10000);
 $produk2 = new Produk("Uncharted", "Noll", "Pusaka Ilmu", 50000);
-$produk3 = new Produk("Doraemon", "Faisal Coding", "Iri Suaka", 50000);
+$produk3 = new Produk("Doraemon", "Faisal Coding", "Iri Suak", 50000);
 $produk4 = new Produk();
 
 //var_dump ($produk1);
