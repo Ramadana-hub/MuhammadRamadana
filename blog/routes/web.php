@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\postcontroller;
+use App\Models\post;
+use Illuminate\Support\Facades\Route; 
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +17,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/about', function () {
-    return view('about', [
-        "nama" => "Muhammad Ramadana",
-        "email" => "danarama154@gmail.com",
-        "image" => "Rama3.jpg"
+    return view('home', [
+        "title" => "Home"
     ]);
 });
-
-Route::get('/post', function () {
-    return view('post');
+Route::get('/about', function () {
+    return view('about', [
+        "title" => "About",
+        "name" => "Muhammad Ramadana",
+        "email" => "danarama154@gmail.com",
+        "image" => "Rama3.jpg"
+]);
 });
+
+
+
+Route::get('/post',[postcontroller::class, 'index']);
+
+//halaman single post
+Route::get('/post/{slug}', [postcontroller::class,'show']);
